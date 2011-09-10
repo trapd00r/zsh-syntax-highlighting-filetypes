@@ -7,8 +7,7 @@ other things. The filetype highlighting rules are taken from my [LS_COLORS][1] p
 
 This will only work in terminals capable of displaying 256 colors.
 
-
-![image](http://i.imgur.com/ji5Sm.png)
+![image](http://devel.japh.se/zsh-syntax-highlighting-filetypes/shot.png)
 
 [0]: https://github.com/nicoulaj/zsh-syntax-highlighting
 [1]: https://github.com/trapd00r/LS_COLORS
