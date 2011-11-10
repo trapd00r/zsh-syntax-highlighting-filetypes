@@ -450,6 +450,42 @@ ZSH_HIGHLIGHT_STYLES+=(
 
 )
 
+mkstyle () {
+  local lastlast
+  local last
+
+  while [ "$#" -gt 0 ]; do
+    cur=$1
+    shift
+
+    if [ "$last" = 5 ]; then
+      if [ "$lastlast" = 38 ]; then
+        style+=( "fg=$cur" )
+        lastlast=
+        last=
+        continue
+      elif [ "$lastlast" = 48 ]; then
+        style+=( "bg=$cur" )
+        lastlast=
+        last=
+        continue
+      fi
+    fi
+
+    lastlast=$last
+    last=$cur
+  done
+
+  case "$last" in
+    00|0) style+=( "none" )       ;;
+    01|1) style+=( "bold" )       ;;
+    04|4) style+=( "underscore" ) ;;
+    05|5) style+=( "blink" )      ;;
+    07|7) style+=( "reverse" )    ;;
+    08|8) style+=( "concealed" )  ;;
+  esac
+}
+
 # Tokens that are always immediately followed by a command.
 ZSH_HIGHLIGHT_TOKENS_FOLLOWED_BY_COMMANDS=(
   '|' '||' ';' '&' '&&' 'noglob' 'nocorrect' 'builtin'
