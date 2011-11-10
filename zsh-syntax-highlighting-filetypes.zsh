@@ -501,6 +501,8 @@ _zsh_main-highlight() {
   for arg in ${(z)BUFFER}; do
     local substr_color=0
 
+    style=
+
     [[ $start_pos -eq 0 && $arg = 'noglob' ]] && highlight_glob=false
 
     ((start_pos+=${#BUFFER[$start_pos+1,-1]}-${#${BUFFER[$start_pos+1,-1]##[[:space:]]#}}))
