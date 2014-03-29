@@ -268,7 +268,7 @@ _zsh_main-highlight() {
           *) continue ;;
         esac
         case $arg in
-          $key) style=$ZSH_HIGHLIGHT_STYLES[$key] ;;
+          *.$key[3,-1]) style=$ZSH_HIGHLIGHT_STYLES[$key] ;;
         esac
         [ -n "$style" ] && break
       done
