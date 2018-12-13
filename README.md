@@ -3,7 +3,7 @@
 zsh-syntax-highlighting-filetypes
 =================================
 
-[!image](/extra/zsh-syntax-hl-ft.png)
+![image](/extra/zsh-syntax-hl-ft.png)
 
 LS\_COLORS on your commandline in realtime as you type.
 
