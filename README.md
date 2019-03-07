@@ -13,5 +13,5 @@ other things. The filetype highlighting rules are taken from my [LS_COLORS][1] p
 
 This will only work in terminals capable of displaying 256 colors.
 
-[0]: https://github.com/nicoulaj/zsh-syntax-highlighting
+[0]: https://github.com/zsh-users/zsh-syntax-highlighting
 [1]: https://github.com/trapd00r/LS_COLORS
