@@ -78,7 +78,7 @@ _zsh_highlight-zle-buffer-p() {
   local region_highlight_size="$1" highlight_predicate="$2"
   # If any highlightings are not taken into account, asume it is needed.
   # This holds for some up/down-history commands, for example.
-  ((region_highlight_size == 0)) || "$highlight_predicate"
+  ((region_highlight_size == 0)) || [[ -n "$highlight_predicate" ]] && "$highlight_predicate"
 }
 
 # Whether the command line buffer is modified or not.
